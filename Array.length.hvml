@@ -1,0 +1,5 @@
+#include "Array.hvml"
+
+Array.length (Empty) = 0
+Array.length (Value *) = 1
+Array.length (Array l * * * * * * * * * * * * * * * *) = l

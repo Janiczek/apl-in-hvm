@@ -1,0 +1,8 @@
+#include "Array.foldl.hvml"
+#include "Array.repeat.hvml"
+#include "Array.map.hvml"
+
+sum x acc = (+ x acc)
+inc x = (+ x 1)
+
+main = (Array.foldl sum 0 (Array.map inc (Array.repeat 256 100)))
