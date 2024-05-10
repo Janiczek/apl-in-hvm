@@ -1,0 +1,3 @@
+#include "List.foldl.hvml"
+
+List.sum list = (List.foldl (@x @acc (+ x acc)) 0 list)

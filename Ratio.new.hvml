@@ -1,0 +1,6 @@
+#include "Num.gcd.hvml"
+
+Ratio.new n d =
+  let gcd = (Num.gcd n d)
+  ((/ n gcd), (/ d gcd))
+

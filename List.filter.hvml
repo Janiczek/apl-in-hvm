@@ -1,0 +1,8 @@
+#include "Bool.if.hvml"
+
+List.filter * [] = []
+List.filter pred (List.cons x xs) = 
+  let next = (List.filter pred xs)
+  (Bool.if (pred x)
+    (List.cons x next)
+    next)

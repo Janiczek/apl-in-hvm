@@ -3,7 +3,6 @@
 MAIN_NAME="${1}"
 TMPDIR=$(mktemp -d -t "hvm-preprocess")
 cp -r ./* "${TMPDIR}/"
-cp -r ../_stdlib/* "${TMPDIR}/"
 cd "${TMPDIR}"
 for file in $(find . -name "*.hvml" | sed 's/^[.][/]//'); do
   echo -e "#ifndef ${file^^}\n#define ${file^^}\n" \
