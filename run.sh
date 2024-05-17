@@ -22,7 +22,10 @@ popd >/dev/null
 TEST_TMP_NAME="_test.bend"
 TEST_FILES=(Test.*.bend)
 
-cat _test_preamble >>"${TMPDIR}/${TEST_TMP_NAME}"
+echo "Result/bind (Result/Ok val) fn = (fn val) " >>"${TMPDIR}/${TEST_TMP_NAME}"
+echo "Result/bind r               *  = r        " >>"${TMPDIR}/${TEST_TMP_NAME}"
+echo "_expect testName 0 = (Result/Err testName)" >>"${TMPDIR}/${TEST_TMP_NAME}"
+echo "_expect *        * = (Result/Ok 1)        " >>"${TMPDIR}/${TEST_TMP_NAME}"
 
 for SINGLE_TEST_FILE in ${TEST_FILES[@]}; do
   echo "#include \"${SINGLE_TEST_FILE}\"" >>"${TMPDIR}/${TEST_TMP_NAME}"
