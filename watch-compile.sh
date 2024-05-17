@@ -5,10 +5,6 @@ DIM="\e[2m";
 
 FILE=$1
 
-function compile {
-  ./run.sh $FILE
-}
-
 function run {
   clear;
   tput reset;
@@ -21,8 +17,4 @@ function run {
   compile;
 }
 
-run;
-
-chokidar . | while read WHATEVER; do
-  run;
-done;
+find . -name '*.bend' | entr -s "clear && tput reset && echo -en '\033c\033[3J' && ./run.sh $FILE"

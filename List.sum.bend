@@ -2,5 +2,7 @@
 
 def List.sum(list):
   fold l = list:
-    case List/nil:  return 0
-    case List/cons: return l.head + l.tail
+    case List/Nil:
+      return 0
+    case List/Cons:
+      return l.head + l.tail

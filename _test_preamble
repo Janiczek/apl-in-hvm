@@ -1,0 +1,5 @@
+Result/bind (Result/Ok val) fn = (fn val)
+Result/bind r               *  = r
+
+_expect testName 0 = (Result/Err testName)
+_expect *        * = (Result/Ok 1)

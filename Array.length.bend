@@ -2,4 +2,4 @@
 
 Array.length (Array/Empty) = 0
 Array.length (Array/Value *) = 1
-Array.length (Array/Array l * * * * * * * * * * * * * * * *) = l
+Array.length (Array/Array l * * * *) = l
