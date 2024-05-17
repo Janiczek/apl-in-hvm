@@ -31,7 +31,7 @@ done
 for SINGLE_TEST_FILE in ${TEST_FILES[@]}; do
   for TESTNAME in $(grep -o "^def test\([a-zA-Z0-9_./]\+\)" "${SINGLE_TEST_FILE}" | sed 's/^def //'); do
     echo "def _${TESTNAME}(_):" >>"${TMPDIR}/${TEST_TMP_NAME}"
-    echo "  return _expect(\"${TESTNAME}\",${TESTNAME}(*))" >>"${TMPDIR}/${TEST_TMP_NAME}"
+    echo "  return _expect(\"${SINGLE_TEST_FILE}: ${TESTNAME}\",${TESTNAME}(*))" >>"${TMPDIR}/${TEST_TMP_NAME}"
   done
 done
 
@@ -53,7 +53,7 @@ bend run-c -s "${TMPDIR}/pp.${TEST_TMP_NAME}" >"${TMPDIR}/_test_out.txt"
 
 if ! grep -q "All tests passed" "${TMPDIR}/_test_out.txt"; then
   echo "Test failed!"
-  cat "${TMPDIR}/_test_out.txt" | grep -o "test[A-Za-z0-9_./]\+"
+  cat "${TMPDIR}/_test_out.txt" | head -n1 | sed 's/.*"\(.*\)".*/\1/'
   echo
   exit 1
 fi
