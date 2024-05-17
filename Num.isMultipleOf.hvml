@@ -1,1 +1,0 @@
-Num.isMultipleOf m n = (== (% n m) 0)

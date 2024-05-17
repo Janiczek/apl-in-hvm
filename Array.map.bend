@@ -1,9 +1,9 @@
-#include "Array.hvml"
+#include "Array.bend"
 
-Array.map * (Empty) = (Empty)
-Array.map fn (Value x) = (Value (fn x))
-Array.map fn (Array l a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15) =
-  (Array l
+Array.map *  (Array/Empty) = (Array/Empty)
+Array.map fn (Array/Value x) = (Array/Value (fn x))
+Array.map fn (Array/Array l a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 a10 a11 a12 a13 a14 a15) =
+  (Array/Array l
     (Array.map fn a0) 
     (Array.map fn a1) 
     (Array.map fn a2) 

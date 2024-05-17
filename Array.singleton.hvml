@@ -1,3 +1,0 @@
-#include "Array.hvml"
-
-Array.singleton x = (Value x)

@@ -1,7 +1,0 @@
-#include "Bool.if.hvml"
-
-List.rangeStep step from to =
-  ((Bool.if (> from to)
-    (@step @from @to [])
-    (@step @from @to (List.cons from (List.rangeStep step (+ from step) to))))
-   step from to)

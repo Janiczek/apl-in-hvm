@@ -1,6 +1,0 @@
-#include "Ratio.new.hvml"
-
-sum x acc = (+ x acc)
-inc x = (+ x 1)
-
-main = (Ratio.new 3 30)
