@@ -1,0 +1,2 @@
+test:         ./watch-compile.sh apl.bend
+run:  TESTS=0 ./watch-compile.sh apl.bend
