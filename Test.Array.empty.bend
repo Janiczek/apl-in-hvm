@@ -2,5 +2,10 @@
 
 def testArrayEmpty(_):
   e = Array.empty
-  return 1
-
+  match e:
+    case Array/Empty:
+      return 1
+    case Array/Value:
+      return 0
+    case Array/Array:
+      return 0

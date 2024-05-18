@@ -20,6 +20,12 @@ def testArrayFoldrLarge(_):
 
 def testArrayFoldrOrder(_):
   dif = lambda n,acc: n - acc
-  arr = Array.repeat(2,+3)
-  x = Array.foldr(dif,+0,arr)
-  return x == 200 # TODO
+  arr = Array/Array(
+          3,
+          Subarrays(Array/Value(30), Array/Value(20), Array/Value(10), Array/Empty),
+          Subarrays.of(Array/Empty),
+          Subarrays.of(Array/Empty),
+          Subarrays.of(Array/Empty),
+        )
+  x = Array.foldr(dif,+5,arr) # (30 - (20 - (10 - 5)))
+  return x == +15

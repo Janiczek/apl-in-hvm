@@ -1,5 +1,6 @@
-#include "Array.repeat.bend"
-#include "Array.foldl.bend"
+#include "List.equal.bend"
 
-def main:
-  return "Hey there!"
+eq x y = (== x y)
+
+def main():
+  return List.equal(eq,[1,2,3],[1,2,3])

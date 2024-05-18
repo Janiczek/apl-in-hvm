@@ -1,31 +1,31 @@
 #include "Array.bend"
-#include "Bool.if.bend"
 #include "Subarrays.empty.bend"
 #include "Subarrays.indexedMap.bend"
 #include "Subarrays.of.bend"
-#include "Subarrays.withLast.bend"
+#include "Subarrays.withFirst.bend"
 
 def Array.repeat(n,x):
   if n == 0:
     return Array/Empty
   else:
-    fn = Bool.if(
-      n > 16,
-      Array.repeat.recursive,
-      Array.repeat.nonrecursive
-    )
-    return fn(n,x)
+    if n > 16:
+      return Array.repeat.recursive(n,x)
+    else:
+      return Array.repeat.nonrecursive(n,x)
 
 def Array.repeat.recursive(n,x):
   perElement = n / 16
   divided = Array.repeat(perElement,x)
+  subs = Subarrays.of(divided)
   return Array/Array(
     n,
-    Subarrays.of(divided)
-    Subarrays.withLast(
+    Subarrays.withFirst(
       Array.repeat(perElement + (n % 16),x),
-      Subarrays.of(divided)
-    )
+      subs,
+    ),
+    subs,
+    subs,
+    subs,
   )
 
 def Array.repeat.nonrecursive(n,x):
