@@ -1,2 +1,0 @@
-#include "Subarrays.empty.bend"
-

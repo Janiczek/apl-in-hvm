@@ -1,2 +1,0 @@
-#include "Subarrays.foldr.bend"
-

@@ -8,3 +8,5 @@ Subarrays.map fn (Subarrays a0 a1 a2 a3) =
     (Array.map fn a1) 
     (Array.map fn a2) 
     (Array.map fn a3))
+
+## TODO tests

@@ -25,7 +25,7 @@ if [ "${TESTS}" -ne 0 ]; then
   ## TODO make it parallel
 
   TEST_TMP_NAME="_test.bend"
-  TEST_FILES=(Test.*.bend)
+  TEST_FILES=$(grep -l "^def test" *.bend)
 
   echo "Result/bind (Result/Ok val) fn = (fn val) " >>"${TMPDIR}/${TEST_TMP_NAME}"
   echo "Result/bind r               *  = r        " >>"${TMPDIR}/${TEST_TMP_NAME}"

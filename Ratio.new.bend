@@ -2,5 +2,7 @@
 #include "Num.sign.bend"
 #include "Num.abs.bend"
 
-def Ratio.new(n,d):
-  return Ratio._reduce(n * Num.sign(d), Num.abs(d))
+## Ratio.new : Int -> Int -> Ratio
+Ratio.new n d = (Ratio._reduce (* n (Num.sign d)) (Num.abs d))
+
+## TODO tests
