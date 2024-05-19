@@ -76,6 +76,7 @@ fi
 MAIN_NAME="${1}"
 MAIN_TMP_NAME="_main.bend"
 cpp -P -E "${TMPDIR}/${MAIN_NAME}" >"${TMPDIR}/${MAIN_TMP_NAME}"
+echo "${TMPDIR}/${MAIN_TMP_NAME}"
 #clear && tput reset && echo -en "\033c\033[3J"
 #cat "${TMPDIR}/_main.bend"
 #echo $TMPDIR
