@@ -9,5 +9,3 @@ Subarrays.foldl fn init (Subarrays a0 a1 a2 a3) =
   (Array.foldl fn
     init
     a0) a1) a2) a3)
-
-## TODO tests

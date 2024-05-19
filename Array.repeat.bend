@@ -54,5 +54,3 @@ def Array.repeat.fillFrom.fn(n,di,i,array):
     return array
   else:
     return Array/Empty
-
-## TODO tests

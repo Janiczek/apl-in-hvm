@@ -4,5 +4,3 @@
 
 ## Ratio.new : Int -> Int -> Ratio
 Ratio.new n d = (Ratio._reduce (* n (Num.sign d)) (Num.abs d))
-
-## TODO tests

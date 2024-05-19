@@ -20,5 +20,3 @@ Array.smash op empty (Array/Array * subs0 subs1 subs2 subs3) =
           (smash subs1))
       (op (smash subs2)
           (smash subs3)))
-
-## TODO tests
