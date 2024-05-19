@@ -3,20 +3,20 @@ Num.abs n =
   if (< n 0) { (- +0 n) }
   else       { n }
 
-def testAbsZero(_):
+def testNumAbsZero(_):
   return Num.abs(0) == 0
 
-def testAbsUnsigned(_):
+def testNumAbsUnsigned(_):
   return Num.abs(5) == 5
 
-def testAbsPositive(_):
+def testNumAbsPositive(_):
   return Num.abs(+5) == +5
 
-def testAbsNegative(_):
+def testNumAbsNegative(_):
   return Num.abs(-5) == +5
 
-def testAbsNegativeFloat(_):
+def testNumAbsNegativeFloat(_):
   return Num.abs(-5.0) == +5.0
 
-def testAbsPositiveFloat(_):
+def testNumAbsPositiveFloat(_):
   return Num.abs(+5.0) == +5.0
