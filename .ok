@@ -1,2 +1,4 @@
-test:         ./watch-compile.sh apl.bend
-run:  TESTS=0 ./watch-compile.sh apl.bend
+test:          ./watch-compile.sh apl.bend
+run:   TESTS=0 ./watch-compile.sh apl.bend
+wtest:         ./watch-compile-win.sh apl.bend
+wrun:  TESTS=0 ./watch-compile-win.sh apl.bend

@@ -55,6 +55,7 @@ if [ "${TESTS}" -ne 0 ]; then
   ## Run the test program
 
   cpp -P -E "${TMPDIR}/${TEST_TMP_NAME}" >"${TMPDIR}/pp.${TEST_TMP_NAME}"
+  echo "${TMPDIR}/pp.${TEST_TMP_NAME}"
   bend run-c -s "${TMPDIR}/pp.${TEST_TMP_NAME}" >"${TMPDIR}/_test_out.txt"
 
   ## If the test out file contains "All tests passed", continue the script, otherwise exit
@@ -66,11 +67,11 @@ if [ "${TESTS}" -ne 0 ]; then
     exit 1
   fi
 
-  ## If successful, run the main program
-
   echo -e "Tests passed!\n"
 
 fi
+
+## Run the main program
 
 MAIN_NAME="${1}"
 MAIN_TMP_NAME="_main.bend"
