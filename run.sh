@@ -80,4 +80,4 @@ echo "${TMPDIR}/${MAIN_TMP_NAME}"
 #clear && tput reset && echo -en "\033c\033[3J"
 #cat "${TMPDIR}/_main.bend"
 #echo $TMPDIR
-bend run-c -s "${TMPDIR}/${MAIN_TMP_NAME}"
+bend run-c -Ono-check-net-size -s "${TMPDIR}/${MAIN_TMP_NAME}"

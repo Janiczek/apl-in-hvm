@@ -1,5 +1,7 @@
-#include "List.equal.bend"
+#include "Array.repeat.bend"
+#include "Array.toList.bend"
 
 def main():
-  eq = lambda x,y: x == y
-  return List.equal(eq,[1,2,3],[1,2])
+  a = Array.repeat(17,8)
+  l = Array.toList(a)
+  return l

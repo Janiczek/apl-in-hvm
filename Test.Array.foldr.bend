@@ -1,6 +1,4 @@
 #include "Array.foldr.bend"
-#include "Subarrays.bend"
-#include "Subarrays.of.bend"
 
 def testArrayFoldr(_):
   sum = lambda n,acc: n + acc
@@ -24,15 +22,22 @@ def testArrayFoldrOrder(_):
   dif = lambda n,acc: n - acc
   arr = Array/Array(
           3,
-          Subarrays(
-            Array/Value(30),
-            Array/Value(20),
-            Array/Value(10),
-            Array/Empty
-          ),
-          Subarrays.of(Array/Empty),
-          Subarrays.of(Array/Empty),
-          Subarrays.of(Array/Empty),
+          Array/Value(30),
+          Array/Value(20),
+          Array/Value(10),
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
+          Array/Empty,
         )
   x = Array.foldr(dif,+5,arr) # (30 - (20 - (10 - 5)))
   return x == +15
